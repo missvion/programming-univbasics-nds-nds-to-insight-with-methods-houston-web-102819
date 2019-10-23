@@ -13,9 +13,12 @@ def directors_totals(nds)
   index = 0
   while index < nds.length do
     each_director_total << nds[index][:name][:movie][:worldwide_grosses]
+    index += 1
+  end
+  directors_totals(nds)
 end
 
-directors_totals(nds)
+
 
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
