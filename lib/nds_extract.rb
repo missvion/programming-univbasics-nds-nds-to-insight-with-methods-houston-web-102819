@@ -6,8 +6,10 @@ require 'directors_database'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 def directors_totals(nds)
-  result = {}
-  nil
+  each_director_total = {}
+  index = 0
+  while index < nds.length do
+    each_director_total << nds[index][:name][:movie][:worldwide_grosses]
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
