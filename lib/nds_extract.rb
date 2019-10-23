@@ -1,4 +1,7 @@
 require 'directors_database'
+require 'pp'
+
+pp directors_database
 
 # Write a method that, given an NDS creates a new Hash
 # The return value should be like:
@@ -11,6 +14,9 @@ def directors_totals(nds)
   while index < nds.length do
     each_director_total << nds[index][:name][:movie][:worldwide_grosses]
 end
+
+directors_totals(nds)
+
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
